@@ -28,6 +28,8 @@ Before working with a BLT project, you need to configure Git correctly. Run the 
   1. `git config --global user.email "you@example.com"`
   2. `git config --global user.name "Your Name"`
 
+Symlink /usr/bin/php to /usr/bin/php5.6
+
 And if you haven't already configured an SSH identity (useful for working with projects on GitHub and interacting with your sites on Acquia Cloud), you should [generate an SSH key](https://help.github.com/articles/generating-an-ssh-key/).
 
 ## Next steps
@@ -43,7 +45,7 @@ Therefore, if you wish to use the prepackaged Drupal VM instance created by BLT 
   1. Use a separate PowerShell or other command line environment to manage the VM via `vagrant` commands.
   2. [Install cbwin](https://github.com/xilun/cbwin#installation) and use it to 'wrap' `vagrant` commands (e.g. `wrun vagrant up` to build the VM from inside Bash).
 
-> Note that if you use `cbwin`, you will need to launch it's included `outbash.exe` environment (rather than the default Bash environment) so it can wrap calls to Windows executables. Also, you should make sure the BLT codebase is in a path accessible to both Windows and the WSL (e.g. `/mnt/c/Users/yourusername/Sites`), otherwise `vagrant` and other Windows apps won't be able to access the code.
+> Note that if you use `cbwin`, you will need to launch its included `outbash.exe` environment (rather than the default Bash environment) so it can wrap calls to Windows executables. Also, you should make sure the BLT codebase is in a path accessible to both Windows and the WSL (e.g. `/mnt/c/Users/yourusername/Sites`), otherwise `vagrant` and other Windows apps won't be able to access the code.
 
 After you run `vm init` (it may error out and say 'Virtualbox is missing is not installed' [sic]), you will then need to run commands pertaining to the VM manually, outside of BLT:
 
